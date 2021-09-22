@@ -1,0 +1,119 @@
+
+
+@font-face {
+  font-family: 'ROKABold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2104@1.1/ROKABold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Global */
+
+:root {
+  /* Font Size */
+  --font-large : 60px;
+  --font-medium : 28px;
+  --font-regular : 18px;
+  --font-small : 16px;
+  --font-micro : 14px;
+
+  /* Font Color */
+  --color-black : "#000000";
+  --color-white : "#FFFFFF";
+  --color-white-grey : #C0B8B8;
+  --color-grey : "#88919A";
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'ROKABold';
+  width: 100vw;
+  height: 100vh;
+  margin: 0px;
+}
+
+body .loading {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  margin-top:-100px; margin-left:-100px; 
+  width:200px; height:200px;
+  text-align: center;
+}
+
+body .loading h1 {
+  font-size: var(--font-large);
+  margin: auto;
+}
+
+body .loading h2 {
+  font-size: var(--font-medium);
+  margin: auto;
+}
+
+.logo {
+  position: absolute;
+  width: 25%;
+  right: 2%;
+  top: 0%;
+}
+
+.signIn {
+  margin: 40px 0px 5px 0px;
+  text-align: left;
+  display: flex;
+  justify-content: center;
+}
+
+.signIn .id, .signIn .pwd {
+  margin: 10px 0px;
+}
+
+.signIn input {
+  margin: 10px 0px;
+  padding: 10px 0px;
+  width: 200px;
+  height: 10px;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  border-style: solid;
+}
+
+:is(.signIn, .signUp) ul {
+  padding: 0px;
+  margin: 0px;
+}
+
+:is(.signIn, .signUp) li {
+  list-style: none;
+}
+
+.signUp {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: auto;
+}
+
+.signUp button {
+  font-family: 'ROKABold';
+  text-align: center;
+  width: 200px;
+  padding: 5px 0px;
+  margin: 10px 0px;
+  border-radius: 20px;
+  border-style: var(--color-white);
+}
+
+.signUp button:first-child {
+  background-color: #125800 ;
+}
+
+.signUp button:last-child {
+  background-color: #A8A52E ;
+}
+
