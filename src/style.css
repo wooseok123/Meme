@@ -10,8 +10,9 @@
 /* Global */
 
 :root {
+
   /* Font Size */
-  --font-large : 60px;
+  --font-large : 50px;
   --font-medium : 28px;
   --font-regular : 18px;
   --font-small : 16px;
@@ -106,14 +107,67 @@ body .loading h2 {
   padding: 5px 0px;
   margin: 10px 0px;
   border-radius: 20px;
-  border-style: var(--color-white);
+  border-style: none;
+  cursor: pointer;
 }
 
-.signUp button:first-child {
+.signUp .login  {
   background-color: #125800 ;
 }
 
-.signUp button:last-child {
+.signUp .signin {
   background-color: #A8A52E ;
 }
 
+/* home.html */
+
+nav {
+  font-size:var(--font-medium);
+  display: flex;
+  justify-content: space-between;
+}
+
+nav i {
+  margin: 10px;
+}
+
+header {
+  display: flex;
+  height: 100px;
+  justify-content: space-between;
+}
+
+header .profile {
+  display: flex;
+  justify-content: center;
+  height: 100px;
+  margin: 0px 20px;
+  vertical-align: middle;
+  line-height: 100px;
+}
+
+header .profile i {
+  font-size: var(--font-medium);
+  line-height: 100px;
+}
+
+header .profile__decription__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+header .profile__decription {
+  margin: 0px 0px 0px 15px;
+  line-height: 7px;
+}
+
+header .profile__decription h3 {
+  font-size: var(--font-micro);
+}
+
+header h4 {
+  margin: 0px 10px 0px 0px;
+  line-height: 100px;
+  vertical-align: middle;
+}
