@@ -14,3 +14,12 @@ menu_dropdown.addEventListener("click",() => {
   menu_dropdown.classList.toggle("dropUp");
 })
 
+const markdownIcon = document.querySelector(".mark");
+const rate_bar = document.querySelector(".rate_2")
+const percentage = document.querySelector(".percentage");
+
+const rate_now = Number((rate_bar.style.width).replace("%",""));
+
+markdownIcon.style.right = String(102-rate_now)+"%"
+percentage.style.right = String(98-rate_now)+"%"
+percentage.innerHTML = `${rate_now}%`
