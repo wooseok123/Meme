@@ -14,7 +14,7 @@
   /* Font Size */
   --font-large : 50px;
   --font-medium : 28px;
-  --font-regular : 18px;
+  --font-regular : 17px;
   --font-small : 15px;
   --font-micro : 12px;
 
@@ -26,6 +26,8 @@
   --color-peach : #ffbdb4;
   --color-light-green : #94ff6f;
   --color-light-orange : #ffb46f;
+  --color-light-blue : #5D9FE0;
+  
 }
 
 * {
@@ -41,6 +43,7 @@ body {
   width: 100vw;
   height: 100vh;
   margin: 0px;
+  overflow-y: hidden;
 }
 
 body .loading {
@@ -132,10 +135,39 @@ nav {
   font-size:var(--font-medium);
   display: flex;
   justify-content: space-between;
+  transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1)
 }
 
 nav i {
   margin: 10px;
+}
+
+nav.visible {
+  color: var(--color-white);
+  background-color: var(--color-light-blue);
+  transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1)
+}
+
+.leftbar {
+  margin: 0px;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  background-color: var(--color-white);
+  z-index: 1;
+  transform: translateX(400px);
+  cursor: pointer;
+  opacity: 0;
+  transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  pointer-events:none;
+}
+
+.leftbar.visible {
+  background-color: var(--color-light-blue);
+  display: block;
+  opacity: 1;
+  transform: translateX(0px);
+  transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 header {
@@ -199,9 +231,9 @@ header h4 {
 }
 
 .menu {
-  position: relative;
   margin: auto;
   text-align: center;
+  transform: rotate(0deg);
 }
 .menu .menu__palette {
   margin: auto;
@@ -214,7 +246,39 @@ header h4 {
   justify-content: space-evenly;
   line-height: 30px;
   font-size: var(--font-micro);
+  transform: rotate(0deg);
+  transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  overflow-y: hidden;
 }
+
+.menu .breakfast, .lunch, .dinner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.menu__palette ul {
+  line-height: 23px;
+  padding: 0px;
+  text-align: center;
+}
+
+.menu__palette li {
+  list-style: none;
+}
+
+.menu__palette.visible {
+  height: 120px;
+  transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.menu .dropUp {
+  position: absolute;
+  right: 10%;
+  top: 40%;
+  transform: rotate(180deg);
+}
+
 
 .menu .menu__palette p {
   margin: 0px;
@@ -223,7 +287,7 @@ header h4 {
 .menu i {
   position: absolute;
   right: 10%;
-  top: 20%;
+  top: 22%;
   color: var(--color-black);
 }
 
@@ -270,6 +334,10 @@ section {
   max-height: 100%;
 }
 
+.info {
+  margin-bottom: 15px;
+}
+
 .info__palette {
   background-color: var(--color-light-orange);
   border-radius: var(--font-regular);
@@ -310,4 +378,45 @@ section {
   margin-right: 15px;
   max-width: 100%;
   max-height: 100%;
+}
+
+.news {
+  position: relative;
+  margin: auto;
+  width: 90%;
+  height: 300px;
+  background-color: beige;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.news header {
+  height: 30px;
+}
+
+.news h2 {
+  position: absolute;
+  text-align: left;
+  font-size: var(--font-regular);
+  margin: 10px 0px 0px 15px;
+} 
+
+.news article {
+  margin: 10px 15px;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+}
+
+.article__description {
+  width: 200px;
+}
+
+.article__description p:first-child {
+  font-size: var(--font-regular);
+  color: var(--color-light-blue);
+}
+
+.article__description p:last-child {
+  font-size: var(--font-micro);
 }
