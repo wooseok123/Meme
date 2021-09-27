@@ -286,7 +286,7 @@ header h4 {
 .menu .dropUp {
   position: absolute;
   right: 10%;
-  top: 40%;
+  top: 50%;
   transform: rotate(180deg);
 }
 
@@ -298,8 +298,15 @@ header h4 {
 .menu i {
   position: absolute;
   right: 10%;
-  top: 22%;
+  top: 55%;
   color: var(--color-black);
+}
+
+.menu p {
+  font-size: var(--font-small);
+  text-align: left;
+  margin-left: 30px;
+  margin-bottom: 2px;
 }
 
 section {
